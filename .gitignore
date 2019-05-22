@@ -1,0 +1,15 @@
+generator.py
+script.extendedinfo/
+!zip/script.extendedinfo/
+script.module.urllib3/
+!zip/script.module.urllib3/
+*.xcf
+*~
+Thumbs.db
+# Visual Studio Code
+.vscode
+
+# Visual Studio
+*.pyproj
+*.sln
+.vs/
