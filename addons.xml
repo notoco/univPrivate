@@ -2,7 +2,7 @@
 <addons>
 <addon id="script.module.urllib3"
        name="urllib3"
-       version="n1.24.3"
+       version="1.25.3"
        provider-name="shazow">
   <requires>
     <import addon="xbmc.python" version="2.25.0"/>
