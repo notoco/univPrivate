@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.notoco.univPrivate" name="Notoco Univ Repo PRIVATE" version="1.0" provider-name="notoco">
+<addon id="repository.notoco.univPrivate" name="Notoco Univ Repo PRIVATE" version="1.1" provider-name="notoco">
 		<extension point="xbmc.addon.repository" name="Notoco Univ Repo">
 			<dir>
 				<info>https://github.com/notoco/univPrivate/raw/master/addons.xml</info>
 				<checksum>https://github.com/notoco/univPrivate/raw/master/addons.xml.md5</checksum>
-				<datadir zip="true">https://github.com/univPrivate/univ-prywatne/raw/master/zip</datadir>
+				<datadir zip="true">https://github.com/notoco/univPrivate/raw/master/zip</datadir>
 			</dir>
 		</extension>
 		<extension point="xbmc.addon.metadata">
