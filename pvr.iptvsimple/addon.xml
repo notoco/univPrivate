@@ -1,26 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
-<addon id="repository.notoco.univPrivate" name="Notoco Univ Repo PRIVATE" version="1.1" provider-name="notoco">
-		<extension point="xbmc.addon.repository" name="Notoco Univ Repo">
-			<dir>
-				<info>https://github.com/notoco/univPrivate/raw/master/addons.xml</info>
-				<checksum>https://github.com/notoco/univPrivate/raw/master/addons.xml.md5</checksum>
-				<datadir zip="true">https://github.com/notoco/univPrivate/raw/master/zip</datadir>
-			</dir>
-		</extension>
-		<extension point="xbmc.addon.metadata">
-			<summary>Notoco Univ Repo PRYWATNE</summary>
-			<description>Repozytorium prywatne - zawiera wersje bibliotek i dodatków do kodi, które U MNIE I DLA MNIE lepiej działają w obniżonych wersjach, bądź są nadpisywane przez inne repozytoria.
-Absolutnie nie używać!
-Repozytorium tylko dla konkretnej konfiguracji kodi, występującej na sprzęcie którego używam.
-NIE UŻYWAĆ - może się rozpocząć piekło zależności.</description>
-			<platform>all</platform>
-			<assets>
-				<icon>icon.png</icon>
-			</assets>
-		</extension>
-	</addon>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <addon id="pvr.iptvsimple" version="3.8.6.1" name="PVR IPTV Simple Client" provider-name="nightik">
   <requires>
     <import addon="kodi.binary.global.main" version="1.0.14"/>
@@ -91,7 +69,7 @@ https://github.com/afedchin/Kodi-addon-iptvsimple/wiki/IPTV-Simple-Home</summary
     <description lang="el_GR">Απλός Πελάτης PVR του IPTV, με υποστήριξη λιστών αναπαραγωγής m3u, αναπαραγωγή ροών Live TV για πηγές πολλαπλής/μοναδικής διανομής, ακρόαση ραδιοφωνικών καναλιών και EPG.</description>
     <description lang="en_AU">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
     <description lang="en_GB">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.
-
+    
 For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Leia/README.md
     </description>
     <description lang="en_NZ">IPTV Simple PVR Client support m3u playlists, streaming of Live TV for multicast/unicast sources, listening to Radio channels and EPG.</description>
@@ -185,4 +163,3 @@ For documentation visit: https://github.com/kodi-pvr/pvr.iptvsimple/blob/Leia/RE
     <platform/>
   </extension>
 </addon>
-</addons>
