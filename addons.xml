@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.0.20" provider-name="BigNoid,marcelveldt,auramod,cartmandos">
+	<requires>
+		<import addon="xbmc.python" version="2.20.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+		<import addon="script.module.unidecode" version="0.4.14"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<news>Template improvements and bug fixes</news>
+		<description lang="bg">Добавка за облици, която осигурява просто управление и списък с потребителски преки пътища (изисква поддръжка от облика)</description>
+		<description lang="de">Add-on für Skins für einfache Bearbeitung und Auflistung von benutzerdefinierten Verknüpfungen (erfordert Skin-Unterstützung)</description>
+		<description lang="el">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
+		<description lang="en">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="es">Complemento para las pieles para proporcionar una gestión sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
+		<description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
+		<description lang="gl">Complemento que fornece aos temas dunha xestión sinxela dos atallos dos usuarios (require soporte do tema)</description>
+		<description lang="hr">Dodatak za presvlake koja omogućava jednostavno upravljanje i prikaz korisnikovih prečaca (zahtijeva podršku presvlake) </description>
+		<description lang="hu">Felszín kiegészítő amely könnyen kezelhetővé és listázhatóvá teszi a felhasználói parancsikonokat (Felszín támogatás szükséges)</description>
+		<description lang="is">Viðbót fyrir viðmót til að halda utan um flýtivísa og fá yfirlit yfir þá (þarfnast stuðnings frá viðmóti)</description>
+		<description lang="it">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
+		<description lang="lt">Priedas teminėms išvaizdoms, kad jos turėtų galimybę paprastai tvarkyti ir atvaizduoti vartotojo  sukurtas nuorodas (reikalingas teminės išvaizdos palaikymas)</description>
+		<description lang="nl">Add-on voor skins om te voorzien in het eenvoudig beheren en sorteren van gebruikers snelkoppelingen (vereist skin ondersteuning)</description>
+		<description lang="no">Tillegg for enkel administrering og opplisting av bruker-snarveier i tema (krever støtte i tema)</description>
+		<description lang="pl">Wtyczka dla skór, która zapewnia proste zarządzanie i tworzenie list skrótów użytkownika (wymaga wsparcia skóry)</description>
+		<description lang="pt">Um add-on que permite que os temas tenham recursos simples para gerir e listar atalhos de utilizadores (é necessário suporte do tema)</description>
+		<description lang="pt_BR">Add-on para que as skins possam prover gerenciamento de lista de atalhos para o menu principal (requer suporte da skin)</description>
+		<description lang="ru">Дополнение для обложек, предоставляющее простой способ управления и список пользовательских ярлыков (требуется поддержка обложкой)</description>
+		<description lang="sv">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
+		<description lang="zh">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU General Public License, v2</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=178294</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/BigNoid/script.skinshortcuts</source>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	</assets>
+	</extension>
+</addon>
+
 <addon id="repository.notoco.univPrivate" name="Notoco Univ Repo PRIVATE" version="1.1" provider-name="notoco">
 		<extension point="xbmc.addon.repository" name="Notoco Univ Repo">
 			<dir>
@@ -20,34 +65,4 @@ NIE UŻYWAĆ - może się rozpocząć piekło zależności.</description>
 			</assets>
 		</extension>
 	</addon>
-
-<addon id="script.audio.profiles" name="Audio Profiles" version="1.4" provider-name="Regss+ mod by notoco + ?">
-    <requires>
-        <import addon="xbmc.python" version="2.14.0"/>
-    </requires>
-    <extension point="xbmc.python.script" library="default.py"/>
-    <extension point="xbmc.service" library="service.py" start="login"/>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Save audio profile and easily switch between them</summary>
-        <summary lang="pl">Zapisuje profile ustawień audio i łatwo przełącza między nimi</summary>
-        <summary lang="it">Salva il profilo audio e cambia facilmente tra di loro</summary>
-        <description lang="en">To map a key for switch audio profile edit keymap xml file and
-            add:[CR]RunScript(script.audio.profiles,0) - for switch profile in
-            loop[CR]RunScript(script.audio.profiles,x) - where x is number of profile
-        </description>
-        <description lang="pl">Aby przypisać przycisk to zmiany profili edytuj plik keymap xml i
-            dodaj:[CR]RunScript(script.audio.profiles,0) - aby przełączać między profilami w
-            pętli[CR]RunScript(script.audio.profiles,x) - gdzie x to numer profilu
-        </description>
-        <description lang="it">Per assegnare il cambio profilo audio ad un pulsante modifica il file keymap xml e
-            aggiungi:[CR]RunScript(script.audio.profiles,0) - per cambiare il profilo in ciclo continuo
-            [CR]RunScript(script.audio.profiles,x) dove x è il numero del profilo
-        </description>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <forum>http://forum.kodi.tv/showthread.php?tid=200081</forum>
-        <source>https://github.com/Regss/script.audio.profiles</source>
-        <email>regss84@gmail.com</email>
-    </extension>
-</addon>
 </addons>
