@@ -1,15 +1,11 @@
 generator.py
-script.extendedinfo/
-!zip/script.extendedinfo/
-script.module.urllib3/
-!zip/script.module.urllib3/
+plugin.video.themoviedb.helper/
+!zip/plugin.video.themoviedb.helper/
+script.skinshortcuts/
+!zip/script.skinshortcuts/
 *.xcf
 *~
 Thumbs.db
-# Visual Studio Code
-.vscode
-
-# Visual Studio
-*.pyproj
-*.sln
-.vs/
+# Test caches
+*.pyc
+*.pyo
