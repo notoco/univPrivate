@@ -1,6 +1,10 @@
 generator.py
 plugin.video.themoviedb.helper/
 !zip/plugin.video.themoviedb.helper/
+plugin.video.netflix/
+!zip/plugin.video.netflix/
+service.upnext/
+!zip/service.upnext/
 script.skinshortcuts/
 !zip/script.skinshortcuts/
 *.xcf
