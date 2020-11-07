@@ -7,7 +7,6 @@ service.upnext/
 !zip/service.upnext/
 script.skinshortcuts/
 !zip/script.skinshortcuts/
-service.hyperion.ng
 *.xcf
 *~
 Thumbs.db
