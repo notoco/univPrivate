@@ -4,6 +4,8 @@ plugin.video.themoviedb.helper/
 plugin.video.netflix/
 !zip/plugin.video.netflix/
 service.upnext/
+service.hyperion.ng
+zip/service.hyperion.ng
 !zip/service.upnext/
 script.skinshortcuts/
 !zip/script.skinshortcuts/
