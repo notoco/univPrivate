@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+		<setting id="state" type="bool" default="true" label="State" visible="false"/>
+		<setting id="startup_notif" type="bool" default="true" label="Startup Notification"/>
+</settings>
