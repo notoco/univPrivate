@@ -92,10 +92,11 @@
     </extension>
 </addon>
 
-<addon id="script.hyperion.switch" name="Ambilight Switch" version="1.2.1" provider-name="piotrekcrash">
+<addon id="script.hyperion.switch" name="Ambilight Switch" version="1.2.2" provider-name="piotrekcrash">
 	<requires>
 		<import addon="xbmc.python" version="2.14.0"/>
 		<import addon="service.hyperion.ng" optional="true"/>
+		<import addon="script.module.requests"/>
 	</requires>
 	<extension point="xbmc.python.script" library="addon.py">
 		<provides>executable</provides>
