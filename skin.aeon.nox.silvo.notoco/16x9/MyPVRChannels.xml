@@ -29,7 +29,6 @@
 			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
 		</control>
 		<include>Topbar</include>
-		<include>PVRMediaMenu</include>
 		<control type="label">
 			<left>60</left>
 			<top>60</top>

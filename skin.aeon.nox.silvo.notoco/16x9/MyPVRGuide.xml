@@ -24,7 +24,6 @@
 			</control>
 		</control>
 		<include>Topbar</include>
-		<include>PVRMediaMenu</include>
 		<control type="label">
 			<left>60</left>
 			<top>60</top>
