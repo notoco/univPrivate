@@ -259,10 +259,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>$SKINSHORTCUTS[infowidthback]</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+                                <texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -689,10 +689,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>$SKINSHORTCUTS[infowidthback]</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -879,21 +879,21 @@
 						<visible>Control.HasFocus(8011$SKINSHORTCUTS[id])</visible>
 						<animation effect="slide" end="0,950" condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + Skin.HasSetting(centermainmenu)">Conditional</animation>
 						<animation effect="slide" end="0,677" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
-						<top>90</top>
-						<left>245</left>
+						<top>85</top>
+						<left>224</left>
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1470</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+                                <texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
 								<include condition="!$SKINSHORTCUTS[widgetsquare]">InfoPosterContent</include>
 								<include content="InfoTextContent" condition="!$SKINSHORTCUTS[widgetsquare]">
-									<param name="left">225</param>
+									<param name="left">250</param>
 									<param name="width">1195</param>
 								</include>
 							</control>
@@ -901,8 +901,8 @@
 							<control type="group">
 								<include condition="$SKINSHORTCUTS[widgetsquare]">InfoSquareContent</include>
 								<include content="InfoTextContent" condition="$SKINSHORTCUTS[widgetsquare]">
-									<param name="left">330</param>
-									<param name="width">1090</param>
+									<param name="left">380</param>
+									<param name="width">1015</param>
 								</include>
 							</control>
 						</control>
@@ -1107,10 +1107,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1890</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -1330,10 +1330,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1470</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -1553,10 +1553,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1890</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -2012,10 +2012,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>$SKINSHORTCUTS[infowidthback]</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -2442,10 +2442,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>$SKINSHORTCUTS[infowidthback]</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -2637,10 +2637,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1470</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -2863,10 +2863,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1890</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -3088,10 +3088,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1470</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">
@@ -3312,10 +3312,10 @@
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-40</top>
+								<top>-30</top>
 								<width>1890</width>
 								<height>391</height>
-								<texture colordiffuse="BFFFFFFF">homewidgets/list_shadow.png</texture>
+									<texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
 							<!-- Poster -->
 							<control type="group">

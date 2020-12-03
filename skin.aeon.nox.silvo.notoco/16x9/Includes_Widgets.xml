@@ -71,7 +71,7 @@
 				<shadowcolor>shadow</shadowcolor>
 				<scroll>true</scroll>
 				<label>$VAR[HomeWidgetInfoTitleVar]</label>
-				<visible>String.IsEmpty(ListItem.ChannelName)</visible>
+                <visible>String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<!-- SubTitle -->
 			<control type="label">
@@ -146,9 +146,10 @@
 	</include>
 	<include name="InfoSquareContent">
 		<control type="multiimage">
+            <left>30</left>
 			<width>310</width>
 			<height>310</height>
-			<aspectratio aligny="$PARAM[Align]">$PARAM[Aspect]</aspectratio>
+			<aspectratio aligny="$PARAM[Align]">keep</aspectratio>
 			<imagepath background="true">$VAR[HomeWidgetPosterVar]</imagepath>
 			<timeperimage>70</timeperimage>
 			<fadetime>1</fadetime>
