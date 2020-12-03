@@ -363,7 +363,7 @@
 		<value>$INFO[ListItem.Duration]</value>
 	</variable>
 	<variable name="VideoListLabel2Var">
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Year]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
 		<value condition="!String.IsEqual(Container.SortMethod,$LOCALIZE[345]) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
@@ -711,7 +711,7 @@
 	<variable name="InfoPanelLabel5Var">
 		<value condition="[Container.Content(movies) | Container.Content(sets)] + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Years))">[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[345]:[/COLOR][CR]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Years)]</value>
 		<value condition="[Container.Content(movies) | Container.Content(sets)]">[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[345]:[/COLOR][CR]$INFO[ListItem.Year]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons)">[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Year]</value>
+		<value condition="Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons)">[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</value>
 	</variable>
 	<variable name="PosterThumbVar">
 		<value condition="Container.Content(genres) + !Skin.HasSetting(coloredflags)">$INFO[ListItem.Label,special://skin/extras/moviegenres/default/,.jpg]</value>
@@ -744,7 +744,7 @@
 	</variable>
 	<variable name="FloorSubLabelVar">
 		<value condition="ListItem.IsCollection">$INFO[Container(4500).NumItems,, $LOCALIZE[342]]</value>
-		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Enable.HourMinuteDuration)">$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes, • ]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]]</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Enable.HourMinuteDuration)">$INFO[ListItem.RatingAndVotes]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]]</value>
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(Enable.HourMinuteDuration)">$INFO[ListItem.Year]$INFO[ListItem.RatingAndVotes, • ]$VAR[ItemDurationVar, • ]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TvShowTitle]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
