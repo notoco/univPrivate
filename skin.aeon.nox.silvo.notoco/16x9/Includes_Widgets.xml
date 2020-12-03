@@ -71,12 +71,13 @@
 				<shadowcolor>shadow</shadowcolor>
 				<scroll>true</scroll>
 				<label>$VAR[HomeWidgetInfoTitleVar]</label>
+				<visible>String.IsEmpty(ListItem.ChannelName)</visible>
 			</control>
 			<!-- SubTitle -->
 			<control type="label">
 				<width>$PARAM[width]</width>
 				<height>27</height>
-				<font>font14</font>
+				<font>font30</font>
 				<textcolor>$VAR[ThemeLabelColor]</textcolor>
 				<shadowcolor>shadow</shadowcolor>
 				<scroll>true</scroll>
