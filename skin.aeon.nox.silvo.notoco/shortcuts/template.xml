@@ -879,13 +879,13 @@
 						<visible>Control.HasFocus(8011$SKINSHORTCUTS[id])</visible>
 						<animation effect="slide" end="0,950" condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + Skin.HasSetting(centermainmenu)">Conditional</animation>
 						<animation effect="slide" end="0,677" condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">Conditional</animation>
-						<top>85</top>
+						<top>87</top>
 						<left>224</left>
 						<control type="group">
 							<animation effect="fade" end="0">WindowClose</animation>
 							<control type="image">
-								<top>-30</top>
-								<width>1470</width>
+								<top>-28</top>
+								<width>1473</width>
 								<height>391</height>
                                 <texture colordiffuse="$SKINSHORTCUTS[widgetbackgroundcolor]" border="40">homewidgets/bg_flat.png</texture>
 							</control>
