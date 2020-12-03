@@ -109,13 +109,6 @@
 							<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[VideoSourceFlagVar]</texture>
 						</control>
                         <control type="image">
-                            <top>2</top>
-                            <width>55</width>
-                            <include>MediaFlagValues</include>
-                            <texture fallback="flags/language/default/-.png">$INFO[VideoPlayer.AudioLanguage,flags/language/default/,.png]</texture>
-                            <aspectratio>keep</aspectratio>
-                        </control>
-                        <control type="image">
                             <top>28</top>
                             <left>12</left>
                             <width>34</width>
