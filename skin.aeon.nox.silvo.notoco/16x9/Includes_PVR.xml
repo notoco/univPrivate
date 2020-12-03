@@ -243,31 +243,8 @@
 				<control type="group">
 					<left>1560</left>
 					<top>875</top>
-					<!-- Yes Weather -->
-					<control type="group">
-						<visible>String.IsEmpty(Weather.IsFetched)</visible>
-						<control type="label">
-							<top>10</top>
-							<width>300</width>
-							<height>30</height>
-							<align>center</align>
-							<font>font24_bold</font>
-							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[System.Date]</label>
-						</control>
-						<control type="label">
-							<top>40</top>
-							<width>300</width>
-							<height>30</height>
-							<align>center</align>
-							<font>font24_bold</font>
-							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[Weather.Temperature]$INFO[Weather.Conditions,  ,]</label>
-						</control>
-					</control>
 					<!-- No Weather -->
 					<control type="group">
-						<visible>!String.IsEmpty(Weather.IsFetched)</visible>
 						<control type="label">
 							<top>20</top>
 							<width>300</width>
