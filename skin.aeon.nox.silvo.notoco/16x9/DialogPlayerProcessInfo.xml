@@ -6,14 +6,13 @@
 			<animation effect="fade" end="0" time="239.76">WindowClose</animation>
 			<control type="image">
 				<width>100%</width>
-				<height>610</height>
+				<height>340</height>
 				<texture border="1,1,1,40">topbar.png</texture>
-				<animation effect="slide" end="0,-275" condition="!VideoPlayer.Content(LiveTV)">Conditional</animation>
 			</control>
 			<!-- VIDEO STREAM -->
 			<control type="grouplist">
 				<width>960</width>
-				<height>540</height>
+				<height>340</height>
 				<itemgap>1</itemgap>
 				<control type="label">
 					<height>45</height>
@@ -71,7 +70,7 @@
 			<control type="grouplist">
 				<left>960</left>
 				<width>960</width>
-				<height>540</height>
+				<height>340</height>
 				<itemgap>1</itemgap>
 				<control type="label">
 					<width>960</width>
@@ -125,154 +124,12 @@
 					<font>font15</font>
 					<textcolor>grey2</textcolor>
 				</control>
-			</control>
-			<!-- PVR BACKEND -->
-			<control type="grouplist">
-				<top>230</top>
-				<width>960</width>
-				<height>540</height>
-				<itemgap>1</itemgap>
-				<visible>VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
-				<control type="label">
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19012]</label>
-					<font>font15_title</font>
-					<textcolor>$VAR[ThemeLabelColor]</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19012]:</label>
-					<label2>$INFO[PVR.ActStreamClient]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19006]:</label>
-					<label2>$INFO[PVR.ActStreamDevice]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19007]:</label>
-					<label2>$INFO[PVR.ActStreamStatus]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19099]:</label>
-					<label2>$INFO[PVR.ActStreamServiceName]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19101]:</label>
-					<label2>$INFO[PVR.ActStreamProviderName]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-			</control>
-			<!-- PVR STREAM -->
-			<control type="grouplist">
-				<left>960</left>
-				<top>230</top>
-				<width>960</width>
-				<height>540</height>
-				<itemgap>1</itemgap>
-				<visible>VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
-				<control type="label">
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[31528]</label>
-					<font>font15_title</font>
-					<textcolor>$VAR[ThemeLabelColor]</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19008]:</label>
-					<label2>$INFO[PVR.ActStreamSignal]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19009]:</label>
-					<label2>$INFO[PVR.ActStreamSNR]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19010] / $LOCALIZE[19011]:</label>
-					<label2>$INFO[PVR.ActStreamBER]$INFO[PVR.ActStreamUNC, / ]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19015]:</label>
-					<label2>$INFO[PVR.ActStreamEncryptionName]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-				<control type="button">
-					<width>960</width>
-					<height>45</height>
-					<textoffsetx>30</textoffsetx>
-					<label>$LOCALIZE[19100]:</label>
-					<label2>$INFO[PVR.ActStreamMux]</label2>
-					<texturefocus />
-					<texturenofocus />
-					<font>font15</font>
-					<textcolor>grey2</textcolor>
-				</control>
-			</control>
+			</control>			
 			<!-- SYSTEM INFO -->
 			<control type="group">
 				<top>230</top>
 				<width>100%</width>
 				<height>90</height>
-				<animation effect="slide" end="0,275" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
 				<control type="grouplist">
 					<width>100%</width>
 					<height>45</height>
