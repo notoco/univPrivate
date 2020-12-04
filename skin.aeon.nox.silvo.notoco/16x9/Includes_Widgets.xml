@@ -97,6 +97,16 @@
 				<label>$VAR[HomeWidgetInfo1Var]</label>
 				<scroll>true</scroll>
 			</control>
+			<control type="progress">
+				<left>16</left>
+				<top>48</top>
+				<width>1010</width>
+				<height>12</height>
+				<info>ListItem.Progress</info>
+				<texturebg colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_border_white.png</texturebg>
+				<midtexture colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_white.png</midtexture>
+				<visible>!String.IsEmpty(Container.ListItem.ChannelName)</visible>
+			</control>
 			<!-- Info 2 -->
 			<control type="label">
 				<width>$PARAM[width]</width>
