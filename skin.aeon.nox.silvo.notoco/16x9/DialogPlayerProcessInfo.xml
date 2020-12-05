@@ -118,7 +118,7 @@
 					<height>45</height>
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[19019]:</label>
-					<label2>$INFO[Player.Process(audiochannels)]</label2>
+					<label2>$INFO[Player.Process(audiochannels)], $INFO[VideoPlayer.AudioLanguage]</label2>
 					<texturefocus />
 					<texturenofocus />
 					<font>font15</font>
