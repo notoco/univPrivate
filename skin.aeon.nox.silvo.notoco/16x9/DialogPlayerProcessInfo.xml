@@ -6,7 +6,7 @@
 			<animation effect="fade" end="0" time="239.76">WindowClose</animation>
 			<control type="image">
 				<width>100%</width>
-				<height>340</height>
+				<height>380</height>
 				<texture border="1,1,1,40">topbar.png</texture>
 			</control>
 			<!-- VIDEO STREAM -->
@@ -129,7 +129,7 @@
 			<control type="group">
 				<top>230</top>
 				<width>100%</width>
-				<height>90</height>
+				<height>140</height>
 				<control type="grouplist">
 					<width>100%</width>
 					<height>45</height>
@@ -176,6 +176,27 @@
 					<texturebg colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_border_white.png</texturebg>
 					<midtexture colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_white.png</midtexture>
 					<info>system.memory(used)</info>
+				</control>
+				<control type="group">
+					<top>58</top>
+					<control type="label">
+						<textoffsetx>30</textoffsetx>
+						<font>font15_title</font>
+						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<label>Bufor ($INFO[Player.CacheLevel]%)</label>
+						<texturefocus />
+						<texturenofocus />
+					</control>
+					<control type="progress">
+						<top>30</top>
+						<description>Buffor BAR</description>
+						<left>270</left>
+						<width>1620</width>
+						<height>20</height>
+						<texturebg colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_border_white.png</texturebg>
+						<midtexture colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_white.png</midtexture>
+						<info>Player.CacheLevel</info>
+					</control>
 				</control>
 			</control>
 		</control>

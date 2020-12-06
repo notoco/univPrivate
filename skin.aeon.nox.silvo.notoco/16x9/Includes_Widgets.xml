@@ -88,25 +88,46 @@
 				<label />
 			</control>
 			<!-- Info 1 -->
-			<control type="label">
-				<width>$PARAM[width]</width>
-				<height>27</height>
-				<font>font14</font>
-				<textcolor>white2</textcolor>
-				<shadowcolor>shadow</shadowcolor>
-				<label>$VAR[HomeWidgetInfo1Var]</label>
-				<scroll>true</scroll>
-			</control>
-			<control type="progress">
-				<left>16</left>
-				<top>48</top>
-				<width>1010</width>
-				<height>12</height>
-				<info>ListItem.Progress</info>
-				<texturebg colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_border_white.png</texturebg>
-				<midtexture colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_white.png</midtexture>
-				<visible>!String.IsEmpty(Container.ListItem.ChannelName)</visible>
-			</control>
+            <control type="group">
+                <top>108</top>
+                <left>230</left>
+                <height>50</height>
+                <visible>!String.IsEmpty(Container.ListItem.ChannelName)</visible>
+                <control type="progress">
+                    <width>1010</width>
+                    <height>16</height>
+                    <info>Container.ListItem.Progress</info>
+                    <texturebg colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_border_white.png</texturebg>
+                    <midtexture colordiffuse="$VAR[ThemeLabelColor]" border="3">new_pvr/texturebg_white.png</midtexture>
+                </control>
+                <control type="label">
+                    <top>25</top>
+                    <height>20</height>
+                    <width>230</width>
+                    <font>font28_bold</font>
+                    <textcolor>grey</textcolor>
+                    <label>$INFO[Container.ListItem.StartTime]</label>
+                </control>
+                <control type="label">
+                    <top>25</top>
+                    <height>20</height>
+                    <width>330</width>
+                    <left>310</left>
+                    <font>font28_bold</font>
+                    <textcolor>grey</textcolor>
+                    <label>$LOCALIZE[2050]: $VAR[ItemDurationVar]</label>
+                </control>
+                <control type="label">
+                    <top>25</top>
+                    <height>20</height>
+                    <left>510</left>
+                    <width>500</width>
+                    <font>font28_bold</font>
+                    <textcolor>grey</textcolor>
+                    <align>right</align>
+                    <label>$INFO[Container.ListItem.EndTime]</label>
+                </control>
+            </control>
 			<!-- Info 2 -->
 			<control type="label">
 				<width>$PARAM[width]</width>
