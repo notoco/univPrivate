@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="script.notoco.helper" name="pomocnik notoco" version="0.2" provider-name="notoco">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="addon.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Pomocne skróty</summary>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.kcleaner" name="KCleaner" provider-name="Dalibor Lanik" version="3.31">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
@@ -74,7 +88,7 @@
 	</extension>
 </addon>
 
-<addon id="script.hyperion.switch" name="Ambilight Switch" version="1.2.2" provider-name="piotrekcrash">
+<addon id="script.hyperion.switch" name="Ambilight Switch" version="1.2.3" provider-name="piotrekcrash">
 	<requires>
 		<import addon="xbmc.python" version="2.14.0"/>
 		<import addon="service.hyperion.ng" optional="true"/>
