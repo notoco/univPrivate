@@ -6,14 +6,7 @@ import os, sys
 addon = xbmcaddon.Addon()
 state = addon.getSetting('state')
 icon = addon.getAddonInfo('icon')
-xbmc_host = addon.getSetting('host')
-xbmc_port = addon.getSetting('port')
 amb_bright = addon.getSetting('bright')
-
-
-headers = {'content-type': 'application/json'}
-
-xbmc_json_rpc_url = "http://" + xbmc_host + ":" + str(xbmc_port) + "/json-rpc"
 
 def turn_off():
     os.system("hyperion-remote -L 0")
