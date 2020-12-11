@@ -180,7 +180,7 @@
 							<width>1215</width>
 							<height>38</height>
 							<font>font13</font>
-							<textcolor>$VAR[ThemeLabelColor]</textcolor>
+							<textcolor>white2</textcolor>
 							<label>$INFO[PVR.TimeshiftCur,$LOCALIZE[31364]: [COLOR grey],[/COLOR]]$INFO[PVR.TimeshiftOffset, [COLOR grey](-,)[/COLOR]]$INFO[VideoPlayer.NextTitle,  $LOCALIZE[19031]: [COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextStartTime, [COLOR grey](,]$INFO[VideoPlayer.NextEndTime, - ,)[/COLOR]]</label>
 							<visible>!Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
 						</control>
@@ -188,7 +188,7 @@
 							<width>1215</width>
 							<height>38</height>
 							<font>font13</font>
-							<textcolor>$VAR[ThemeLabelColor]</textcolor>
+							<textcolor>white2</textcolor>
 							<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: [COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextStartTime, [COLOR grey](,]$INFO[VideoPlayer.NextEndTime, - ,)[/COLOR]]</label>
 							<visible>!Pvr.IsTimeShift</visible>
 						</control>

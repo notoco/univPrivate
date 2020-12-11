@@ -78,7 +78,7 @@
 				<width>$PARAM[width]</width>
 				<height>27</height>
 				<font>font30</font>
-				<textcolor>$VAR[ThemeLabelColor]</textcolor>
+				<textcolor>white2</textcolor>
 				<shadowcolor>shadow</shadowcolor>
 				<scroll>true</scroll>
 				<label>$VAR[HomeWidgetInfoSubTitleVar]</label>
