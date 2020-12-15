@@ -18,6 +18,9 @@ def turn_on():
     addon.setSetting('state', 'true')
     send_notification("Ambilight", "On")
 
+def cpu():
+    send_notification("Użycie systemu", "CPU: $INFO[System.CPUUsage]   RAM: $INFO[System.memory(used.percent)]")
+
 def send_notification(komponent, message):
     xbmcgui.Dialog().notification(komponent, message, icon=icon)
 

@@ -31,3 +31,8 @@ if __name__ == '__main__':
             xbmc.executebuiltin("xbmc.ActivateWindow(fullscreenvideo)")
         else:
             xbmc.executebuiltin("Action(back)")
+#CPU
+    elif arg == "cpu":
+        control.cpu()
+        
+
