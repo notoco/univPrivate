@@ -469,7 +469,7 @@
 					<include condition="System.HasAddon(service.library.data.provider)">PlayListStatsList</include>
 					<control type="label">
 						<left>485</left>
-						<width>740</width>
+						<width>940</width>
 						<height>40</height>
 						<label>$VAR[LibraryStatsVar]</label>
 						<scroll>true</scroll>
