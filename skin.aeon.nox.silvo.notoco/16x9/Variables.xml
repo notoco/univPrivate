@@ -363,8 +363,8 @@
 		<value>$INFO[ListItem.Duration]</value>
 	</variable>
 	<variable name="VideoListLabel2Var">
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Year]</value>
-		<value condition="!String.IsEqual(Container.SortMethod,$LOCALIZE[345]) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]</value>
+		<value condition="Container.Content(episodes)">$VAR[ItemDurationVar]</value>
+		<value condition="!String.IsEqual(Container.SortMethod,$LOCALIZE[345]) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="MusicListLabel3Var">
