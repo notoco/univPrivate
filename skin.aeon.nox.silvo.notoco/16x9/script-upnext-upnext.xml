@@ -81,7 +81,7 @@
                         <overlaytexture></overlaytexture>
                         <lefttexture></lefttexture>
                         <texturebg colordiffuse="00ffffff">white.jpg</texturebg>
-                        <midtexture colordiffuse="FF2965A0">white.jpg</midtexture>
+                        <midtexture colordiffuse="FF305367">white.jpg</midtexture>
                     </control>
                 </control>
                 <!-- Labels -->
@@ -95,9 +95,9 @@
                         <height>35</height>
                         <aligny>center</aligny>
                         <font>font25_title</font>
-                        <textcolor>eeffffff</textcolor>
+                        <textcolor>white</textcolor>
                         <shadowcolor>00000000</shadowcolor>
-                        <label>$ADDON[service.upnext 30036]</label>
+                        <label>Kolejny za [B][COLOR FF305367]$INFO[Window.Property(remaining)][/COLOR][/B] sekundy</label>
                         <visible>!Integer.IsGreater(Player.TimeRemaining,59)</visible>
                     </control>
                     <control type="label">
@@ -105,9 +105,9 @@
                         <height>35</height>
                         <aligny>center</aligny>
                         <font>font25_title</font>
-                        <textcolor>eeffffff</textcolor>
+                        <textcolor>white</textcolor>
                         <shadowcolor>00000000</shadowcolor>
-                        <label>$ADDON[service.upnext 30008]</label>
+                        <label>Kolejny [B][COLOR FF305367]$INFO[Window.Property(remaining)][/COLOR][/B]</label>
                         <visible>Integer.IsGreater(Player.TimeRemaining,59)</visible>
                     </control>
                     <!-- Details -->
@@ -155,9 +155,9 @@
                             <shadowcolor>22000000</shadowcolor>
                             <aligny>center</aligny>
                             <align>center</align>
-                            <texturefocus border="10" colordiffuse="FF2965A0">button.png</texturefocus>
+                            <texturefocus border="10" colordiffuse="FF305367">button.png</texturefocus>
                             <texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-                            <alttexturefocus border="10" colordiffuse="FF2965A0">button.png</alttexturefocus>
+                            <alttexturefocus border="10" colordiffuse="FF305367">button.png</alttexturefocus>
                             <alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
                             <pulseonselect>no</pulseonselect>
                         </control>
@@ -173,9 +173,9 @@
                             <shadowcolor>22000000</shadowcolor>
                             <aligny>center</aligny>
                             <align>center</align>
-                            <texturefocus border="10" colordiffuse="FF2965A0">button.png</texturefocus>
+                            <texturefocus border="10" colordiffuse="FF305367">button.png</texturefocus>
                             <texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-                            <alttexturefocus border="10" colordiffuse="FF2965A0">button.png</alttexturefocus>
+                            <alttexturefocus border="10" colordiffuse="FF305367">button.png</alttexturefocus>
                             <alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
                             <pulseonselect>no</pulseonselect>
                         </control>

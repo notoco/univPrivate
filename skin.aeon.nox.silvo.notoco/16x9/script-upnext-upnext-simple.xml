@@ -52,14 +52,14 @@
                             <shadowcolor>22000000</shadowcolor>
                             <aligny>center</aligny>
                             <align>center</align>
-                            <texturefocus border="10" colordiffuse="FF172A91">button.png</texturefocus>
+                            <texturefocus border="10" colordiffuse="FF305367">button.png</texturefocus>
                             <texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-                            <alttexturefocus border="10" colordiffuse="FF172A91">button.png</alttexturefocus>
+                            <alttexturefocus border="10" colordiffuse="FF305367">button.png</alttexturefocus>
                             <alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
                             <pulseonselect>no</pulseonselect>
                         </control>
                         <control type="button" id="11">
-                            <label>    $ADDON[service.upnext 30037]</label>
+                            <label>    Następny odcinek za [COLOR FF305367]$INFO[Window.Property(remaining)][/COLOR] sekundy</label>
                             <onclick>SendClick(3012)</onclick>
                             <visible>!Integer.IsGreater(Player.TimeRemaining,59)</visible>
                             <height>56</height>
@@ -72,9 +72,9 @@
                             <shadowcolor>22000000</shadowcolor>
                             <aligny>center</aligny>
                             <align>center</align>
-                            <texturefocus border="10" colordiffuse="FF172A91">button.png</texturefocus>
+                            <texturefocus border="10" colordiffuse="FF305367">button.png</texturefocus>
                             <texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-                            <alttexturefocus border="10" colordiffuse="FF172A91">button.png</alttexturefocus>
+                            <alttexturefocus border="10" colordiffuse="FF305367">button.png</alttexturefocus>
                             <alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
                             <pulseonselect>no</pulseonselect>
                         </control>
@@ -90,9 +90,9 @@
                             <shadowcolor>22000000</shadowcolor>
                             <aligny>center</aligny>
                             <align>center</align>
-                            <texturefocus border="10" colordiffuse="FF172A91">button.png</texturefocus>
+                            <texturefocus border="10" colordiffuse="FF305367">button.png</texturefocus>
                             <texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-                            <alttexturefocus border="10" colordiffuse="FF172A91">button.png</alttexturefocus>
+                            <alttexturefocus border="10" colordiffuse="FF305367">button.png</alttexturefocus>
                             <alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
                             <pulseonselect>no</pulseonselect>
                         </control>
