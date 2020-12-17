@@ -1,22 +1,7 @@
-# Copyright (C) 2016 stereodruid(J.G.)
-#
-#
-# This file is part of OSMOSIS
-#
-# OSMOSIS is free software: you can redistribute it.
-# You can modify it for private use only.
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# OSMOSIS is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
 # -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from kodi_six.utils import py2_encode, py2_decode
+
 import os, sys
 import time
 import re
@@ -116,8 +101,12 @@ def getSources():
     addItem(getString(39007, globals.addon), 5, globals.MEDIA_REMOVE)
     addItem(getString(39008, globals.addon), 51, globals.MEDIA_REMOVE)
     addItem(getString(39009, globals.addon), 52, globals.MEDIA_REMOVE)
-    if xbmc.getCondVisibility('System.HasAddon(service.watchdog)') != 1:
-        addon_details = jsonrpc('Addons.GetAddonDetails', dict(addonid='service.watchdog', properties=['enabled', 'installed'])).get('addon')
+    if globals.KODI_VERSION >= 19:
+        watchdog_id = 'service.librarywatchdog'
+    else:
+        watchdog_id = 'service.watchdog'
+    if xbmc.getCondVisibility('System.HasAddon({0})'.format(watchdog_id)) != 1:
+        addon_details = jsonrpc('Addons.GetAddonDetails', dict(addonid=watchdog_id, properties=['enabled', 'installed'])).get('addon')
         if addon_details and addon_details.get('installed'):
             addItem(getString(39010, globals.addon), 7, globals.MEDIA_ICON)
         else:

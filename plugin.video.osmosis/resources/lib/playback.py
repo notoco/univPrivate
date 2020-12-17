@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from kodi_six.utils import PY2, py2_encode, py2_decode
+
 from json import loads
 import os
 import re
@@ -9,9 +9,8 @@ import xbmc
 import xbmcgui
 import xbmcplugin
 
-from .common import Globals, Settings, sleep
+from .common import Globals, Settings, sleep, jsonrpc
 from .guiTools import resumePointDialog, selectDialog
-from .jsonUtils import jsonrpc
 from .kodiDB import getKodiEpisodeID, getKodiMovieID, getVideo
 from .l10n import getString
 from .stringUtils import cleanStrmFilesys, getProvidername, parseMediaListURL
@@ -66,7 +65,7 @@ def play(argv, params):
                         item.setArt({'thumb': match.group(1)})
             else:
                 sTitle = argv[0][argv[0].index('|') + 1:]
-                props = getKodiMovieID(selectedEntry[2])
+                props = getKodiMovieID('{0}{1}'.format(selectedEntry[2], sTitle))
                 infoLabels['title'] = sTitle
                 infoLabels['mediatype'] = 'movie'
                 if props:
@@ -166,6 +165,11 @@ class Player(xbmc.Player):
         next_episode_filepath = self.filepath.replace('s{0}e{1}'.format(self.next_episode.get('season'), self.next_episode.get('episode') - 1),
                                                       's{0}e{1}'.format(self.next_episode.get('season'), self.next_episode.get('episode')))
         k_next_episode = getKodiEpisodeID(next_episode_filepath, self.next_episode.get('season'), self.next_episode.get('episode'))
+        if not k_next_episode:
+            next_episode_filepath = self.filepath.replace('s{0}e{1}'.format(self.next_episode.get('season'), self.next_episode.get('episode') - 1),
+                                                          's{0}e{1}'.format(self.next_episode.get('season') + 1, 1))
+            self.next_episode.update(dict(season=self.next_episode.get('season') + 1, episode=1))
+            k_next_episode = getKodiEpisodeID(next_episode_filepath, self.next_episode.get('season'), self.next_episode.get('episode'))
         if k_next_episode:
             next_episode_details = jsonrpc('VideoLibrary.GetEpisodeDetails', {'episodeid': k_next_episode.get('id'), 'properties': ['runtime']}).get('episodedetails', {})
             if next_episode_details.get('runtime') == 0:

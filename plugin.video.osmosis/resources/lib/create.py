@@ -1,22 +1,7 @@
-# Copyright (C) 2016 stereodruid(J.G.)
-#
-#
-# This file is part of OSMOSIS
-#
-# OSMOSIS is free software: you can redistribute it.
-# You can modify it for private use only.
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# OSMOSIS is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
 # -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from kodi_six.utils import py2_encode, py2_decode
+
 import json
 import os
 import re
@@ -84,23 +69,15 @@ def fillPluginItems(url, media_type='video', file_type=False, strm=False, strm_n
         if globals.monitor.abortRequested():
             exit()
     else:
-        details = [dict(playableSingleMedia=True, url=plugin_url)]
+        details = [dict(playableSingleMedia=True, url=plugin_url, name=name_orig)]
 
     if re.search('Movies|YouTube|TV-Shows|Album', strm_type):
-        pDialogToClose = not pDialog
-        if not pDialog:
-            pDialog = globals.dialogProgressBG
-            pDialog.create(heading='\'{0}\' {1}'.format(strm_name, getString(39138, globals.addon)))
-
         if re.search('Movies|YouTube', strm_type):
             addMovies(details, strm_name, strm_type, name_orig, pDialog)
         elif re.search('TV-Shows', strm_type):
             getTVShowFromList(details, strm_name, strm_type, name_orig, pDialog)
         elif re.search('Album', strm_type):
             addAlbum(details, strm_name, strm_type, pDialog)
-
-        if pDialogToClose:
-            pDialog.close()
 
         return
 
@@ -145,7 +122,6 @@ def fillPluginItems(url, media_type='video', file_type=False, strm=False, strm_n
 
 
 def addToMedialist(params):
-    settings = Settings()
     name = name_orig = params.get('name')
     # A dialog to rename the Change Title for Folder and MediaList entry:
     if params.get('noninteractive', False) == False:
@@ -231,7 +207,11 @@ def addToMedialist(params):
                 except:
                     pass
 
-                fillPluginItems(url, strm=True, strm_name=name, strm_type=cType, name_orig=name_orig)
+                pDialog = globals.dialogProgressBG
+                pDialog.create(heading='\'{0}\' {1}'.format(name, getString(39138, globals.addon)))
+                fillPluginItems(url, strm=True, strm_name=name, strm_type=cType, name_orig=name_orig, pDialog=pDialog)
+                if pDialog:
+                    pDialog.close()
                 # globals.dialog.notification(getString(39126, globals.addon), getString(39127, globals.addon), globals.MEDIA_ICON, 5000, True)
 
 
@@ -416,7 +396,8 @@ def addAlbum(contentList, strm_name, strm_type, pDialog, PAGINGalbums='1'):
                 else:
                     link = file
 
-                pDialog.update(int(j), message='\'{0}\' {1}'.format(title, getString(39138, globals.addon)))
+                if pDialog:
+                    pDialog.update(int(j), message='\'{0}\' {1}'.format(title, getString(39138, globals.addon)))
                 path = os.path.join(strm_type, cleanStrmFilesys(artist), cleanStrmFilesys(strm_name))
                 if album and artist and title and path and link and track:
                     albumList.append({'path': path, 'title': title, 'link': link, 'album': album, 'artist': artist, 'track': track, 'duration': duration,
@@ -482,7 +463,8 @@ def addMovies(contentList, strm_name, strm_type, name_orig, pDialog, provider='n
 
                     provider = getProviderId(file)
 
-                    pDialog.update(int(j), message='\'{0}\' {1}'.format(label, getString(39138, globals.addon)))
+                    if pDialog:
+                        pDialog.update(int(j), message='\'{0}\' {1}'.format(label, getString(39138, globals.addon)))
                     if filetype and filetype == 'file' and get_title_with_OV:
                         m_path = getMovieStrmPath(strm_type, strm_name, label)
                         m_title = getStrmname(label)
@@ -508,8 +490,8 @@ def addMovies(contentList, strm_name, strm_type, name_orig, pDialog, provider='n
             if settings.LINK_TYPE == 0 and name_orig and file.find('name_orig=') == -1:
                 url = 'name_orig={0};{1}'.format(name_orig , url)
             m_path = getMovieStrmPath(strm_type, strm_name)
-            m_title = getStrmname(strm_name)
-            movieList.append({'path': m_path, 'title':  cleanStrmFilesys(m_title), 'url': url, 'provider': provider})
+            m_title = cleanLabels(contentList[0].get('name'), keep_year=settings.KEEP_MOVIE_YEAR)
+            movieList.append({'path': m_path, 'title':  m_title, 'url': url, 'provider': provider})
             pagesDone = settings.PAGING_MOVIES
 
     if globals.monitor.abortRequested():
@@ -521,7 +503,8 @@ def addMovies(contentList, strm_name, strm_type, name_orig, pDialog, provider='n
     j = 100 / len(movieList) if len(movieList) > 0 else 1
     # Write strms for all values in movieList
     for movie in movieList:
-        pDialog.update(int(j), message='\'{0}\' {1}'.format(movie.get('title'), getString(39138, globals.addon)))
+        if pDialog:
+            pDialog.update(int(j), message='\'{0}\' {1}'.format(movie.get('title'), getString(39138, globals.addon)))
         strm_link = 'plugin://{0}/?url=plugin&mode=10&mediaType=movie&id={1}|{2}'.format(globals.PLUGIN_ID, movie.get('movieID'), movie.get('title')) if settings.LINK_TYPE == 0 else movie.get('url')
         addon_log('write movie = {0}'.format(movie))
         writeSTRM(cleanStrms(movie.get('path')), cleanStrms(movie.get('title')), strm_link)
@@ -630,7 +613,7 @@ def getTVShowFromList(showList, strm_name, strm_type, name_orig, pDialog, pagesD
                             episodesList.append(detailInfo)
 
             step = float(100.0 / len(episodesList) if len(episodesList) > 0 else 1)
-            if pagesDone > 0:
+            if pagesDone > 0 and pDialog:
                 pDialog.update(int(step), '\'{0} - Staffel {1}\' {2}'.format(showtitle, episodeseason, getString(39138, globals.addon)))
 
             split_episode = 0
@@ -657,7 +640,8 @@ def getTVShowFromList(showList, strm_name, strm_type, name_orig, pDialog, pagesD
 
             for index, episode in enumerate(episodesList):
                 pagesDone = getEpisode(episode, strm_name, strm_type, pagesDone=pagesDone, name_orig=name_orig)
-                pDialog.update(int(step * (index + 1)))
+                if pDialog:
+                    pDialog.update(int(step * (index + 1)))
 
             episodesList = []
 

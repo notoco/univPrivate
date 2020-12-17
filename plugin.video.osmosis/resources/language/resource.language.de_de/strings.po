@@ -120,6 +120,18 @@ msgctxt "#31306"
 msgid "Interval (hours)"
 msgstr "Intervall (Stunden)"
 
+msgctxt "#31307"
+msgid "Show update progress"
+msgstr "Aktualisierungsfortschritt anzeigen"
+
+msgctxt "#31308"
+msgid "When scheduled update"
+msgstr "Bei zeitgesteuerter Aktualisierung"
+
+msgctxt "#31309"
+msgid "When updating manually"
+msgstr "Bei manueller Aktualisierung"
+
 msgctxt "#31400"
 msgid "TheTVDB"
 msgstr "TheTVDB"
@@ -213,60 +225,60 @@ msgid "Music-DB directory"
 msgstr "Musik-DB Speicherort"
 
 msgctxt "#32300"
-msgid "Osmosis TV-Show database"
-msgstr "Osmosis Seriendatenbank"
-
-msgctxt "#32301"
-msgid "TV-Show-DB username"
-msgstr "Serien-DB Benutzername"
-
-msgctxt "#32302"
-msgid "TV-Show-DB password"
-msgstr "Serien-DB Passwort"
-
-msgctxt "#32303"
-msgid "TV-Show-DB filename"
-msgstr "Serien-DB Datenbank"
-
-msgctxt "#32304"
-msgid "TV-Show-DB IP"
-msgstr "Serien-DB IP-Adresse"
-
-msgctxt "#32305"
-msgid "TV-Show-DB Port"
-msgstr "Serien-DB Port"
-
-msgctxt "#32306"
-msgid "TV-Show-DB directory"
-msgstr "Serien-DB Speicherort"
-
-msgctxt "#32400"
 msgid "Osmosis Movie database"
 msgstr "Osmosis Filmdatenbank"
 
-msgctxt "#32401"
+msgctxt "#32301"
 msgid "Movie-DB username"
 msgstr "Film-DB Benutzername"
 
-msgctxt "#32402"
+msgctxt "#32302"
 msgid "Movie-DB password"
 msgstr "Film-DB Passwort"
 
-msgctxt "#32403"
+msgctxt "#32303"
 msgid "Movie-DB filename"
 msgstr "Film-DB Datenbank"
 
-msgctxt "#32404"
+msgctxt "#32304"
 msgid "Movie-DB IP"
 msgstr "Film-DB IP-Adresse"
 
-msgctxt "#32405"
+msgctxt "#32305"
 msgid "Movie-DB Port"
 msgstr "Film-DB Port"
 
-msgctxt "#32406"
+msgctxt "#32306"
 msgid "Movie-DB directory"
 msgstr "Film-DB Speicherort"
+
+msgctxt "#32400"
+msgid "Osmosis TV-Show database"
+msgstr "Osmosis Seriendatenbank"
+
+msgctxt "#32401"
+msgid "TV-Show-DB username"
+msgstr "Serien-DB Benutzername"
+
+msgctxt "#32402"
+msgid "TV-Show-DB password"
+msgstr "Serien-DB Passwort"
+
+msgctxt "#32403"
+msgid "TV-Show-DB filename"
+msgstr "Serien-DB Datenbank"
+
+msgctxt "#32404"
+msgid "TV-Show-DB IP"
+msgstr "Serien-DB IP-Adresse"
+
+msgctxt "#32405"
+msgid "TV-Show-DB Port"
+msgstr "Serien-DB Port"
+
+msgctxt "#32406"
+msgid "TV-Show-DB directory"
+msgstr "Serien-DB Speicherort"
 
 msgctxt "#32500"
 msgid "Osmosis Music database"

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en_GB\n"
+"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#30000"
@@ -120,6 +120,18 @@ msgctxt "#31306"
 msgid "Interval (hours)"
 msgstr ""
 
+msgctxt "#31307"
+msgid "Show update progress"
+msgstr ""
+
+msgctxt "#31308"
+msgid "When scheduled update"
+msgstr ""
+
+msgctxt "#31309"
+msgid "When updating manually"
+msgstr ""
+
 msgctxt "#31400"
 msgid "TheTVDB"
 msgstr ""
@@ -213,59 +225,59 @@ msgid "Music-DB directory"
 msgstr ""
 
 msgctxt "#32300"
-msgid "Osmosis TV-Show database"
-msgstr ""
-
-msgctxt "#32301"
-msgid "TV-Show-DB username"
-msgstr ""
-
-msgctxt "#32302"
-msgid "TV-Show-DB password"
-msgstr ""
-
-msgctxt "#32303"
-msgid "TV-Show-DB filename"
-msgstr ""
-
-msgctxt "#32304"
-msgid "TV-Show-DB IP"
-msgstr ""
-
-msgctxt "#32305"
-msgid "TV-Show-DB Port"
-msgstr ""
-
-msgctxt "#32306"
-msgid "TV-Show-DB directory"
-msgstr ""
-
-msgctxt "#32400"
 msgid "Osmosis Movie database"
 msgstr ""
 
-msgctxt "#32401"
+msgctxt "#32301"
 msgid "Movie-DB username"
 msgstr ""
 
-msgctxt "#32402"
+msgctxt "#32302"
 msgid "Movie-DB password"
 msgstr ""
 
-msgctxt "#32403"
+msgctxt "#32303"
 msgid "Movie-DB filename"
 msgstr ""
 
-msgctxt "#32404"
+msgctxt "#32304"
 msgid "Movie-DB IP"
 msgstr ""
 
-msgctxt "#32405"
+msgctxt "#32305"
 msgid "Movie-DB Port"
 msgstr ""
 
-msgctxt "#32406"
+msgctxt "#32306"
 msgid "Movie-DB directory"
+msgstr ""
+
+msgctxt "#32400"
+msgid "Osmosis TV-Show database"
+msgstr ""
+
+msgctxt "#32401"
+msgid "TV-Show-DB username"
+msgstr ""
+
+msgctxt "#32402"
+msgid "TV-Show-DB password"
+msgstr ""
+
+msgctxt "#32403"
+msgid "TV-Show-DB filename"
+msgstr ""
+
+msgctxt "#32404"
+msgid "TV-Show-DB IP"
+msgstr ""
+
+msgctxt "#32405"
+msgid "TV-Show-DB Port"
+msgstr ""
+
+msgctxt "#32406"
+msgid "TV-Show-DB directory"
 msgstr ""
 
 msgctxt "#32500"
@@ -320,7 +332,7 @@ msgctxt "#33005"
 msgid "Addons that should be ignored by the playback dialog"
 msgstr ""
 
-msgctxt "#31006"
+msgctxt "#33006"
 msgid "Addons for which infolabels are to be added"
 msgstr ""
 

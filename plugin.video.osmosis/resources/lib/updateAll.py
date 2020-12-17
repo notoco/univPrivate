@@ -1,23 +1,10 @@
-# Copyright (C) 2016 stereodruid(J.G.) Mail: stereodruid@gmail.com
-#
-#
-# This file is part of OSMOSIS
-#
-# OSMOSIS is free software: you can redistribute it.
-# You can modify it for private use only.
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# OSMOSIS is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
 from kodi_six.utils import py2_decode
+
 import re
+
 import xbmcvfs
 
 from .common import Globals, Settings
@@ -51,8 +38,15 @@ def strm_update(selectedItems=None, actor=0):
 
     items = selectedItems if selectedItems else [{'entry': item} for item in thelist]
     if len(items) > 0:
-        pDialog = globals.dialogProgressBG
-        pDialog.create(getString(39140, globals.addon))
+        settings = Settings()
+        if settings.SHOW_UPDATE_PROGRESS and \
+                ((actor == 0 and settings.SHOW_UPDATE_PROGRESS_MANUALLY) or \
+                ((actor == 1 or actor == 2) and settings.SHOW_UPDATE_PROGRESS_SCHEDULED) or \
+                (actor == 3 and settings.SHOW_UPDATE_PROGRESS_STARTUP)):
+            pDialog = globals.dialogProgressBG
+            pDialog.create(getString(39140, globals.addon))
+        else:
+            pDialog = None
 
         iUrls = 0
         splittedEntries = []
@@ -64,7 +58,8 @@ def strm_update(selectedItems=None, actor=0):
             splittedEntries.append(splits)
 
         if iUrls == 0:
-            pDialog.close()
+            if pDialog:
+                pDialog.close()
             return
 
         tUrls = iUrls
@@ -81,14 +76,16 @@ def strm_update(selectedItems=None, actor=0):
                     if module and hasattr(module, 'update'):
                         url = module.update(name, url, 'video', thelist)
 
-                pDialog.update(int(j), heading='{0}: {1}/{2}'.format(getString(39140, globals.addon), (index + 1), iUrls), message='\'{0}\' {1}'.format(getStrmname(name), getString(39134, globals.addon)))
+                if pDialog:
+                    pDialog.update(int(j), heading='{0}: {1}/{2}'.format(getString(39140, globals.addon), (index + 1), iUrls), message='\'{0}\' {1}'.format(getStrmname(name), getString(39134, globals.addon)))
                 j += step
 
                 fillPluginItems(url, strm=True, strm_name=name, strm_type=cType, name_orig=name_orig, pDialog=pDialog)
                 tUrls -= 1
+        if pDialog:
+            pDialog.close()
 
-        pDialog.close()
         if actor == actor_update_periodictime:
-            globals.dialog.notification(getString(39123, globals.addon), '{0} {1}h'.format(getString(39136, globals.addon), Settings().SCHEDULED_UPDATE_INTERVAL), globals.MEDIA_ICON, 5000, True)
+            globals.dialog.notification(getString(39123, globals.addon), '{0} {1}h'.format(getString(39136, globals.addon), settings.SCHEDULED_UPDATE_INTERVAL), globals.MEDIA_ICON, 5000, True)
         elif actor == actor_update_fixtime:
-            globals.dialog.notification(getString(39123, globals.addon), '{0} {1}h'.format(getString(39137, globals.addon), Settings().SCHEDULED_UPDATE_TIME), globals.MEDIA_ICON, 5000, True)
+            globals.dialog.notification(getString(39123, globals.addon), '{0} {1}h'.format(getString(39137, globals.addon), settings.SCHEDULED_UPDATE_TIME), globals.MEDIA_ICON, 5000, True)

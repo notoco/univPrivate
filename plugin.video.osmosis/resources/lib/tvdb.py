@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from kodi_six.utils import py2_decode
+
 import requests
 import json
 import os
 import time
 import re
+
 import xbmc
 import xbmcaddon
 import xbmcgui

@@ -1,26 +1,14 @@
-# Copyright (C) 2016 stereodruid(J.G.) Mail: stereodruid@gmail.com
-#
-#
-# This file is part of OSMOSIS
-#
-# OSMOSIS is free software: you can redistribute it.
-# You can modify it for private use only.
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# OSMOSIS is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
 # -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from kodi_six.utils import py2_decode
+
+import _strptime
+
 from json import dumps, loads
 import os
 from re import search
 from time import ctime, mktime, strftime, strptime, time
+
 import xbmc
 import xbmcvfs
 
@@ -112,7 +100,7 @@ if __name__ == '__main__':
             if (next <= now):
                 next, next_json = writeScheduledUpdate(now)
                 xbmc.executebuiltin('RunPlugin(plugin://{0}/?mode=666&updateActor=1)'.format(globals.PLUGIN_ID))
-        if settings.SCHEDULED_UPDATE == 2 and strftime('%H:%M') == strftime('%H:%M', settings.SCHEDULED_UPDATE_TIME):
+        if settings.SCHEDULED_UPDATE == 2 and strftime('%H:%M') == globals.addon.getSetting('scheduled_update_time'):
             xbmc.executebuiltin('RunPlugin(plugin://{0}/?mode=666&updateActor=2)'.format(globals.PLUGIN_ID))
             sleep(60)
         sleep(30)

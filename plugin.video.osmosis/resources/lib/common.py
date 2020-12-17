@@ -3,13 +3,17 @@
     Provides: Globals, Settings, sleep, jsonRPC
 '''
 from __future__ import unicode_literals
+
+import _strptime
+
 from datetime import date
+from json import dumps, loads
 from kodi_six.utils import py2_decode, py2_encode
 from os.path import join as OSPJoin
 from re import search
 from sys import argv
 from time import mktime, strptime
-from json import dumps, loads
+
 import xbmc
 import xbmcaddon
 import xbmcgui
@@ -69,7 +73,7 @@ class Globals(Singleton):
             cdate = search('Git:(\d+)', bv)
         cdate = date.fromtimestamp(mktime(strptime(cdate.group(1), '%Y%m%d'))) if cdate else None
         self._globals['KODI_COMPILE_DATE'] = cdate
-        self._globals['FEATURE_PLUGIN_RESUME_SYNC'] = self.KODI_VERSION >= 18 and self.KODI_COMPILE_DATE and self.KODI_COMPILE_DATE >= date(2020, 1, 28)
+        self._globals['FEATURE_PLUGIN_RESUME_SYNC'] = self.KODI_VERSION >= 19 and self.KODI_COMPILE_DATE and self.KODI_COMPILE_DATE >= date(2020, 1, 28)
 
         try:
             import StorageServer
@@ -157,8 +161,12 @@ class Settings(Singleton):
         elif 'SCHEDULED_UPDATE' == name: return int(self._gs('scheduled_update'))
         elif 'SCHEDULED_UPDATE_INTERVAL' == name: return int(self._gs('scheduled_update_interval'))
         elif 'SCHEDULED_UPDATE_INTERVAL_FILENNAME_AND_PATH' == name: return py2_decode(OSPJoin(self.MEDIALIST_PATH, 'scheduled_update_interval.txt'))
-        elif 'SCHEDULED_UPDATE_TIME' == name: return strptime(self._gs('scheduled_update_time'), '%H:%M')
+        elif 'SCHEDULED_UPDATE_TIME' == name: return self._gs('scheduled_update_time')
         elif 'SEARCH_THETVDB' == name: return int(self._gs('search_thetvdb'))
+        elif 'SHOW_UPDATE_PROGRESS' == name: return self._gs('show_update_progress') == 'true'
+        elif 'SHOW_UPDATE_PROGRESS_MANUALLY' == name: return self._gs('show_update_progress_manually') == 'true'
+        elif 'SHOW_UPDATE_PROGRESS_SCHEDULED' == name: return self._gs('show_update_progress_scheduled') == 'true'
+        elif 'SHOW_UPDATE_PROGRESS_STARTUP' == name: return self._gs('show_update_progress_startup') == 'true'
         elif 'STRM_LOC' == name: return py2_decode(xbmc.translatePath(self._gs('STRM_LOC')))
         elif 'TVDB_DIALOG_AUTOCLOSE_TIME' == name: return int(self._gs('tvdb_dialog_autoclose_time'))
         elif 'TVDB_TOKEN_FILENNAME_AND_PATH' == name: return py2_decode(OSPJoin(self.MEDIALIST_PATH, 'tvdb_token.txt'))
