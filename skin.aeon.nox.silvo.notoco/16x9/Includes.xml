@@ -2991,7 +2991,7 @@
 							<font>font30_title_bold</font>
 							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
-							<label>$INFO[Player.Title]$INFO[VideoPlayer.Year, (,)]</label>
+							<label>$INFO[Player.Title]]</label>
 							<visible>!VideoPlayer.Content(episodes)</visible>
 						</control>
 						<control type="label">
@@ -3017,7 +3017,7 @@
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
-							<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title,  -  ]$INFO[VideoPlayer.Premiered, (,)]</label>
+							<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,: ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]$INFO[VideoPlayer.Title,  -  ]</label>
 							<visible>VideoPlayer.Content(episodes)</visible>
 						</control>
 						<control type="grouplist">
