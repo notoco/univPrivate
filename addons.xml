@@ -47,7 +47,7 @@
   </extension>
 </addon>
 
-<addon id="skin.aeon.nox.silvo.notoco" version="2020.12.17.1" name="Aeon Nox: SiLVO - mod NOTOCO" provider-name="SiLVO">
+<addon id="skin.aeon.nox.silvo.notoco" version="2020.12.22.0" name="Aeon Nox: SiLVO - mod NOTOCO" provider-name="SiLVO">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0" />
 		<import addon="script.skinshortcuts" version="1.0.10" />
