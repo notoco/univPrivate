@@ -2099,7 +2099,7 @@
 						<height>45</height>
 						<font>font14</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
-						<label>$INFO[ListItem.Rating,$LOCALIZE[31146]: [COLOR grey],[/COLOR]]$INFO[ListItem.Top250,[COLOR grey] / $LOCALIZE[13409] # ,[/COLOR]]$INFO[ListItem.Year,   $LOCALIZE[345]: [COLOR grey],[/COLOR]]$INFO[ListItem.Duration(mins),   $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Runtime),   $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
+						<label>$INFO[ListItem.Top250,[COLOR grey] / $LOCALIZE[13409] # ,[/COLOR]]$INFO[ListItem.Year,   $LOCALIZE[345]: [COLOR grey],[/COLOR]]$INFO[ListItem.Duration(mins),   $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Runtime),   $LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
 						<visible>!Container.Content(episodes)</visible>
 					</control>
 					<control type="label">
@@ -2109,7 +2109,7 @@
 						<height>45</height>
 						<font>font14</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
-						<label>$INFO[ListItem.RatingAndVotes,$LOCALIZE[31146]: [COLOR grey],[/COLOR] ]$INFO[ListItem.Duration(mins),$LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
+						<label>$INFO[ListItem.Duration(mins),$LOCALIZE[2050]: [COLOR grey], $LOCALIZE[12391][/COLOR]]</label>
 						<visible>Container.Content(episodes)</visible>
 					</control>
 				</control>
@@ -3033,141 +3033,6 @@
 								<font>font15</font>
 								<textcolor>grey</textcolor>
 								<label>$INFO[Player.FinishTime,$LOCALIZE[31393]: ,]  •  $VAR[PlayerTimeRemainingHourVar,, ]$VAR[PlayerTimeRemainingMinuteVar]</label>
-							</control>
-							<control type="grouplist">
-								<width>1420</width>
-								<height>60</height>
-								<itemgap>10</itemgap>
-								<orientation>horizontal</orientation>
-								<usecontrolcoords>true</usecontrolcoords>
-								<control type="group">
-									<visible>!String.IsEmpty(VideoPlayer.Rating)</visible>
-									<width>170</width>
-									<height>60</height>
-									<control type="label">
-										<width>auto</width>
-										<height>30</height>
-										<align>center</align>
-										<label>$INFO[VideoPlayer.Rating]</label>
-										<font>font15_bold</font>
-										<textcolor>grey</textcolor>
-									</control>
-									<control type="label">
-										<top>30</top>
-										<width>auto</width>
-										<height>30</height>
-										<align>center</align>
-										<label>[LOWERCASE]$VAR[RatingAndVotesVar][/LOWERCASE]</label>
-										<font>font11</font>
-										<textcolor>grey</textcolor>
-									</control>
-								</control>
-								<control type="grouplist">
-									<visible>!String.IsEmpty(VideoPlayer.UserRating)</visible>
-									<width>100</width>
-									<orientation>horizontal</orientation>
-									<control type="image">
-										<width>50</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture colordiffuse="$VAR[ThemeLabelColor]">favourites.png</texture>
-										<animation effect="fade" end="67" condition="true">Conditional</animation>
-									</control>
-									<control type="label">
-										<height>60</height>
-										<width>auto</width>
-										<font>font15_bold</font>
-										<textcolor>grey</textcolor>
-										<label>$INFO[VideoPlayer.UserRating]</label>
-									</control>
-								</control>
-								<control type="grouplist">
-									<visible>!String.IsEmpty(VideoPlayer.Top250)</visible>
-									<width>165</width>
-									<itemgap>5</itemgap>
-									<orientation>horizontal</orientation>
-									<control type="image">
-										<width>80</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>logos/imdb.png</texture>
-										<colordiffuse>grey</colordiffuse>
-									</control>
-									<control type="label">
-										<width>auto</width>
-										<height>60</height>
-										<align>center</align>
-										<label>$INFO[VideoPlayer.Top250,#]</label>
-										<font>font15_bold</font>
-										<textcolor>grey</textcolor>
-									</control>
-								</control>
-								<control type="grouplist">
-									<visible>VideoPlayer.Content(movies)</visible>
-									<width>390</width>
-									<height>60</height>
-									<orientation>horizontal</orientation>
-									<control type="grouplist">
-										<visible>!String.IsEmpty(Container(9142).ListItem.Rating(tomatometerallcritics))</visible>
-										<width>130</width>
-										<orientation>horizontal</orientation>
-										<control type="image">
-											<width>60</width>
-											<height>55</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[RottenFreshLogoVar]</texture>
-										</control>
-										<control type="label">
-											<height>60</height>
-											<width>auto</width>
-											<font>font15_bold</font>
-											<textcolor>grey</textcolor>
-											<label>$VAR[RottenFreshLabelVar]</label>
-										</control>
-									</control>
-									<control type="grouplist">
-										<visible>!String.IsEmpty(Container(9142).ListItem.Rating(tomatometerallaudience))</visible>
-										<width>130</width>
-										<orientation>horizontal</orientation>
-										<control type="image">
-											<width>60</width>
-											<height>55</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[RottenFreshAudienceLogoVar]</texture>
-										</control>
-										<control type="label">
-											<width>auto</width>
-											<height>60</height>
-											<font>font15_bold</font>
-											<textcolor>grey</textcolor>
-											<label>$VAR[RottenFreshAudienceLabelVar]</label>
-										</control>
-									</control>
-									<control type="grouplist">
-										<visible>!String.IsEmpty(Container(9142).ListItem.Rating(metacritic))</visible>
-										<width>130</width>
-										<itemgap>3</itemgap>
-										<usecontrolcoords>true</usecontrolcoords>
-										<orientation>horizontal</orientation>
-										<control type="image">
-											<top>6</top>
-											<width>60</width>
-											<height>48</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>logos/metacritic.png</texture>
-										</control>
-										<control type="label">
-											<width>auto</width>
-											<height>60</height>
-											<font>font15_bold</font>
-											<textcolor>grey</textcolor>
-											<label>$VAR[MetacriticLabelVar]</label>
-										</control>
-									</control>
-								</control>
 							</control>
 						</control>
 						<control type="label">
