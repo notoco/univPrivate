@@ -17,8 +17,11 @@ if __name__ == '__main__':
     elif arg == "amb_switch":
         if state == 'true':
             control.turn_off()
+            control.send_notification("Ambilight", "Wyłączono podświetlenie")
         else:
             control.turn_on()
+            control.send_notification("Ambilight", "Włączono podświetlenie")
+
 #ESC
     elif arg == "esc":
         xbmc.executebuiltin("Action(Stop)")

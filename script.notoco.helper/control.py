@@ -11,12 +11,10 @@ amb_bright = addon.getSetting('bright')
 def turn_off():
     os.system("hyperion-remote -L 0")
     addon.setSetting('state', 'false')
-    send_notification("Ambilight", "Off")
 
 def turn_on():
     os.system("hyperion-remote -L " + amb_bright)
     addon.setSetting('state', 'true')
-    send_notification("Ambilight", "On")
 
 def cpu():
     send_notification("Użycie systemu", "CPU: $INFO[System.CPUUsage]   RAM: $INFO[System.memory(used.percent)]")
