@@ -1805,7 +1805,7 @@
 		<value condition="Integer.IsEqual(Player.TimeRemaining(h),1) + Integer.IsEqual(Player.TimeRemaining(mm),00)">$INFO[Player.TimeRemaining(h),, $LOCALIZE[31183]]</value>
 	</variable>
 	<variable name="PlayerTimeRemainingMinuteVar">
-		<value condition="Integer.IsGreaterOrEqual(Player.TimeRemaining(mm),10)">$INFO[Player.TimeRemaining(m),, $LOCALIZE[31180]]</value>
+		<value condition="Integer.IsGreaterOrEqual(Player.TimeRemaining(mm),10)">$LOCALIZE[31180]:  $INFO[Player.TimeRemaining(m)]</value>
 		<value condition="Integer.IsEqual(Player.TimeRemaining(mm),09)">$LOCALIZE[12319] $LOCALIZE[31180]</value>
 		<value condition="Integer.IsEqual(Player.TimeRemaining(mm),08)">$LOCALIZE[12318] $LOCALIZE[31180]</value>
 		<value condition="Integer.IsEqual(Player.TimeRemaining(mm),07)">$LOCALIZE[12317] $LOCALIZE[31180]</value>
