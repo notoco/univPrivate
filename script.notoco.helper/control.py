@@ -17,7 +17,7 @@ def turn_on():
     addon.setSetting('state', 'true')
 
 def cpu():
-    send_notification("Użycie systemu", "CPU: $INFO[System.CPUUsage] / $INFO[System.CPUTemperature]   RAM: $INFO[System.memory(used.percent)]")
+    send_notification("", "[B]CPU:[/B] $INFO[System.CPUUsage]  [B]Temperatura[/B] $INFO[System.CPUTemperature]   [B]RAM:[/B] $INFO[System.memory(used.percent)]")
 
 def send_notification(komponent, message):
     xbmcgui.Dialog().notification(komponent, message, icon=icon)
