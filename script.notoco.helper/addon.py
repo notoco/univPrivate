@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import xbmc
 import control
+import time
+import json
+
 state = control.get_setting('state')
 if __name__ == '__main__':
     arg = None
@@ -38,4 +41,17 @@ if __name__ == '__main__':
     elif arg == "cpu":
         control.cpu()
         
+#Hyperion restart
+    elif arg == "hypereset":
+        xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","id":7,"params":{"addonid": "service.hyperion.ng","enabled":false}}')
+        xbmc.sleep(2)
+        xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","id":7,"params":{"addonid": "service.hyperion.ng","enabled":true}}')
+        xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","id":7,"params":{"addonid": "script.service.hyperion-control","enabled":false}}')
+        xbmc.sleep(2)
+        xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","id":7,"params":{"addonid": "script.service.hyperion-control","enabled":true}}')
+
+
+
+
+
 
