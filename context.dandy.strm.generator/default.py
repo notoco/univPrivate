@@ -25,7 +25,6 @@ IS_EDIT = ADDON.getSetting('is_edit') if ADDON.getSetting('is_edit') else "false
 CATEGORIES = ADDON.getSetting('categories') if ADDON.getSetting('categories') else None
 DIRECTORY = ADDON.getSetting('directory') if ADDON.getSetting('directory') else PATH
 GENERATE_NFO = ADDON.getSetting('nfo') if ADDON.getSetting('nfo') else "false"
-SUPPORT_US = ADDON.getSetting('us') if ADDON.getSetting('us') else "false"
 PLAYABLE = ADDON.getSetting('playable') if ADDON.getSetting('playable') else "false"
 
 try    : HANDLE = int(sys.argv[1])
@@ -89,7 +88,7 @@ def get_image():
 def select_category():
     category = None
     if CATEGORIES != None:
-       ret = xbmcgui.Dialog().select("Select category", CATEGORIES.split(";"))
+       ret = xbmcgui.Dialog().select("Wybierz kategorię", CATEGORIES.split(";"))
        if ret >= 0:
            category = CATEGORIES.split(";")[ret]
     return category
@@ -239,10 +238,6 @@ def run(uris, title):
     titles = []
     for item in uril:
         titles.append(get_addon_id(item))
-        
-    if (SUPPORT_US == "true") and (title) and (cwnd != 10000):
-            titles.append("Search with United Search ...")  
-            uril.append("plugin://plugin.video.united.search/?action=search&keyword={0}".format(title))
         
     ret = 0
     if len(uril) > 0:
