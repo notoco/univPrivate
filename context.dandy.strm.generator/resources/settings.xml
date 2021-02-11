@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<settings>
-    <setting label="Categories" type="text" id="categories" default="Movie;TVShow"/>
-    <setting label="Save directory" id="directory" type="folder" default=""/>
-    <setting label="Edit title" type="bool" id="is_edit" default="false"/>
-    <setting label="Generate .nfo" type="bool" id="nfo" default="false"/>
-    <setting label="Add support United Search" type="bool" id="us" default="false"/>
-    <setting label="Check source content type" type="bool" id="playable" default="true"/>
-</settings>
