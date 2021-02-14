@@ -4,6 +4,7 @@ import control
 import time
 import json
 
+
 state = control.get_setting('state')
 if __name__ == '__main__':
     arg = None
@@ -27,9 +28,13 @@ if __name__ == '__main__':
 
 #ESC
     elif arg == "esc":
-        xbmc.executebuiltin("Action(Stop)")
-        xbmc.executebuiltin("Dialog.Close(all, true)")
-        xbmc.executebuiltin("xbmc.ActivateWindow(home)")
+        osd = xbmc.getCondVisibility('Window.IsActive(seekbar)')
+        if (osd == True):  
+            xbmc.executebuiltin("Action(Info)")
+        else:
+            xbmc.executebuiltin("Action(Stop)")
+            xbmc.executebuiltin("Dialog.Close(all, true)")
+            xbmc.executebuiltin("xbmc.ActivateWindow(home)")
 #EPG
     elif arg == "epg":
         playing = xbmc.Player().isPlayingVideo()
