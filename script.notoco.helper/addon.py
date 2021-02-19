@@ -33,8 +33,7 @@ if __name__ == '__main__':
             xbmc.executebuiltin("Action(Info)")
         else:
             xbmc.executebuiltin("Action(Stop)")
-            xbmc.executebuiltin("Dialog.Close(all, true)")
-            xbmc.executebuiltin("xbmc.ActivateWindow(home)")
+            
 #EPG
     elif arg == "epg":
         playing = xbmc.Player().isPlayingVideo()
