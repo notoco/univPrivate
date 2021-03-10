@@ -29,10 +29,13 @@ if __name__ == '__main__':
 #ESC
     elif arg == "esc":
         osd = xbmc.getCondVisibility('Window.IsActive(seekbar)')
+        pause = xbmc.getCondVisibility('Player.Paused')
         if (osd == True):  
             xbmc.executebuiltin("Action(Info)")
         else:
             xbmc.executebuiltin("Action(Stop)")
+        if (pause == True):  
+            xbmc.executebuiltin("Action(Play)")
             
 #EPG
     elif arg == "epg":
